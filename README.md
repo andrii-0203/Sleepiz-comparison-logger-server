@@ -75,9 +75,15 @@ Open http://localhost:5174
 
 ### API (e.g. Render, Railway, Vercel serverless)
 
-- Deploy the `comparison-logger` folder as a Node app
+- Deploy the `comparison-logger` folder (or repo root if it is the comparison-logger) as a Node app
 - Set env vars in the platform
 - Ensure the deployed URL is reachable from TB (and from your network if TB is on-prem)
+
+#### Render
+
+- **Build Command:** `yarn install && yarn build` (or leave as `yarn install` — `postinstall` runs `yarn build` and creates `dist/`)
+- **Start Command:** `yarn start` or `node dist/index.js`
+- Root directory: where `package.json` and `src/` live (e.g. repo root if the repo is the comparison-logger)
 
 ### Dashboard (e.g. Vercel, Netlify)
 
